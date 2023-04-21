@@ -50,7 +50,7 @@
         <form action="/restaurants/{{restaurants._id}}/edit" method="GET" style="display:inline">
           <button class="btn btn-outline-secondary" type="submit">Edit</button>
         </form>
-        <form action="/restaurants/{{restaurants._id}}/delete" method="POST" style="display:inline" id="delete-form">
+        <form action="/restaurants/{{restaurants._id}}?_method=DELETE" method="POST" style="display:inline" id="delete-form">
           <button class="btn btn-outline-danger" type="submit" id="delete-button">Delete</button>
         </form>
       </li>

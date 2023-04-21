@@ -1,6 +1,6 @@
 <h1 class="mb-1 restaurant-new-title">編輯餐廳</h1>
 <div class="container-new mt-5">
-  <form action="/restaurants/{{restaurants._id}}/edit" id="form" method="POST" class="row g-3 needs-validation"
+  <form action="/restaurants/{{restaurants._id}}?_method=PUT" id="form" method="POST" class="row g-3 needs-validation"
     novalidate>
     {{!-- name --}}
     <div class="form-group">
