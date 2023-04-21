@@ -1,4 +1,4 @@
-<h1 class="mb-1 restaurant-new-title">新增餐廳</h1>
+<h1 class="mb-1 restaurant-edit-title">新增餐廳</h1>
 <div class="container-new mt-5">
   <form action="/restaurants" id="form" method="POST" class="row g-3 needs-validation" novalidate>
     {{!-- name --}}
@@ -83,7 +83,8 @@
       </div>
     </div>
     <div class="form-button">
-      <button type="submit" class="btn btn-primary" id="create-button">Create</button>
+      <a href="/" class="btn btn-secondary" role="button">Back</a>
+      <button type="submit" class="btn btn-secondary" id="create-button">Create</button>
     </div>
     
   </form>

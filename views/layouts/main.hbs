@@ -20,42 +20,19 @@
 <body>
   <header>
     <!-- navigation -->
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light">
       <div class="container container-navbar">
         <a class="navbar-brand" href="/">
-          <i class="mr-5 fa-solid fa-utensils" style="color: #515961;"></i> <span>Restaurant List</span> 
+          <i class="mr-5 fa-solid fa-utensils" style="color: #F2BE5C;"></i> <span>Restaurant List</span> 
         </a>
         <a class="btn btn-outline-secondary" id="create" role="button" href="/restaurants/new">Create</button></a>
       </div>
     </nav>
-
-    {{!-- <div class="banner"></div> --}}
   </header>
-  <div class="container container-search-bar">
-    <div class="search-bar-div" style="display:inline-block">
-      {{!-- <div class="search-bar-inner"> --}}
-        <form action="/restaurants/search" id="search-form">
-          <div class="input-group">
-            <input type="text" name="keyword" class="form-control" placeholder="請輸入餐廳、類別 . . ." aria-label="Restaurant Name..."
-              value="{{keyword}}" aria-describedby="search-button">
-            <div class="input-group-append">
-              <button class="btn btn-major" type="submit" id="search-button"><i class="fas fa-search"></i></button>
-            </div>
-          </div>
-        </form>
-      {{!-- </div> --}}
-    </div>
-    <div class="form-group sort-div" style="display:inline-block">
-      <select class="form-select" aria-label="Default select example">
-        <option selected>排序</option>
-        <option value="asc">A->Z</option>
-        <option value="desc">Z->A</option>
-        <option value="category">類別</option>
-        <option value="location">地區</option>
-      </select>
-    </div>
+  <div class="container-render">
+    {{{body}}}
   </div>
-  {{{body}}}
+  
   <script src="/public/javascript/popper.js"></script>
   <script src="/public/javascript.bootstrap.js"></script>
   {{!-- 表單驗證 --}}

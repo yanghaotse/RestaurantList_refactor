@@ -1,9 +1,9 @@
 <h1 class="mb-1 restaurant-show-title">{{restaurants.name}}</h1>
-<div class="container-detail">
+<div class="container container-detail">
   <div class="row">
     <div class="col-12 col-md-10 mx-auto detail-div">
       <div class="detail-word">
-        <p class="mb-1">
+        <p class="mb-1 detail-p">
           <span class="text-secondary">
             <i class="fas fa-utensils pr-2"></i>
             類別：
@@ -11,7 +11,7 @@
           {{restaurants.category}}
         </p>
         
-        <p class="mb-1">
+        <p class="mb-1 detail-p">
           <span class="text-secondary">
             <i class="fas fa-map-marker-alt pr-2"></i>
             地址：
@@ -31,7 +31,7 @@
         </p>
         <p class="mb-1">
           <span class="text-secondary">
-            <i class="fa-solid fa-star" style="color: #f0e800;"></i>
+            <i class="fa-solid fa-star" style="color: #f8c21f;"></i>
             評分：
           </span>
           {{restaurants.rating}}
@@ -47,8 +47,11 @@
     </div>
     <ul class="detail-ul" style="text-align:center font-size:24px;">
       <li style="display:inline">
+        <form action="/" style="display:inline">
+          <button type="submit" class="btn btn-outline-secondary">Back</button>
+        </form>
         <form action="/restaurants/{{restaurants._id}}/edit" method="GET" style="display:inline">
-          <button class="btn btn-outline-secondary" type="submit">Edit</button>
+          <button class="btn btn-outline-primary" type="submit">Edit</button>
         </form>
         <form action="/restaurants/{{restaurants._id}}?_method=DELETE" method="POST" style="display:inline" id="delete-form">
           <button class="btn btn-outline-danger" type="submit" id="delete-button">Delete</button>
@@ -56,5 +59,4 @@
       </li>
     </ul>
   </div>
-  <a class="btn btn-light create-plus" href="/restaurants/new"><i class="fa-solid fa-plus" style="color: #fff;"></i></a>
 </div>
