@@ -1,0 +1,9 @@
+.env
+#npm
+node_modules
+*.log
+*.gz
+#windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini

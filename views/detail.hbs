@@ -1,0 +1,60 @@
+<h1 class="mb-1 restaurant-show-title">{{restaurants.name}}</h1>
+<div class="container-detail">
+  <div class="row">
+    <div class="col-12 col-md-10 mx-auto detail-div">
+      <div class="detail-word">
+        <p class="mb-1">
+          <span class="text-secondary">
+            <i class="fas fa-utensils pr-2"></i>
+            類別：
+          </span>
+          {{restaurants.category}}
+        </p>
+        
+        <p class="mb-1">
+          <span class="text-secondary">
+            <i class="fas fa-map-marker-alt pr-2"></i>
+            地址：
+          </span>
+          {{restaurants.location}}
+          <a href="{{restaurants.google_map}}" class="text-secondary" target="_blank">
+            <i class="fa-solid fa-location-arrow" style="color: #f00a0a;"></i>
+          </a>
+        </p>
+        
+        <p class="mb-1">
+          <span class="text-secondary">
+            <i class="fas fa-mobile-alt pr-2"></i>
+            電話：
+          </span>
+          {{restaurants.phone}}
+        </p>
+        <p class="mb-1">
+          <span class="text-secondary">
+            <i class="fa-solid fa-star" style="color: #f0e800;"></i>
+            評分：
+          </span>
+          {{restaurants.rating}}
+        </p>
+        
+        <p class="mb-5 mt-3">
+          <strong>{{restaurants.description}}</strong> 
+        </p>
+      </div>
+      <img class="rounded mx-auto d-block mb-4 w-100" src="{{restaurants.image}}" alt="{{restaurants.name}}"
+        style="max-width: 600px;">
+
+    </div>
+    <ul class="detail-ul" style="text-align:center font-size:24px;">
+      <li style="display:inline">
+        <form action="/restaurants/{{restaurants._id}}/edit" method="GET" style="display:inline">
+          <button class="btn btn-outline-secondary" type="submit">Edit</button>
+        </form>
+        <form action="/restaurants/{{restaurants._id}}/delete" method="POST" style="display:inline" id="delete-form">
+          <button class="btn btn-outline-danger" type="submit" id="delete-button">Delete</button>
+        </form>
+      </li>
+    </ul>
+  </div>
+  <a class="btn btn-light create-plus" href="/restaurants/new"><i class="fa-solid fa-plus" style="color: #fff;"></i></a>
+</div>

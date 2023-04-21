@@ -1,0 +1,40 @@
+
+
+<!-- restaurant list -->
+<div class="container mt-5">
+  <div class="row row-cols-1 row-cols-md-3">
+    {{#each restaurants}}
+    <div class="container-restaurant col-12">
+        {{!-- render restaurant-list --}}
+        <a href="/restaurants/{{this._id}}/detail" class="text-secondary">
+          <div class="card mb-3">
+            <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}">
+            <div class="card-body p-3">
+              <h6 class="card-title mb-1">{{this.name}}</h6>
+      
+              <div class="restaurant-category mb-1">
+                <i class="fas fa-utensils pr-2"></i> {{this.category}}
+              </div>
+      
+              <span class="font-weight-normal">
+                {{this.rating}}
+                <i class="fa-solid fa-star" style="color: #f0e800;"></i>
+              </span>
+            </div>
+            <ul class="index-ul">
+              <li style="display:inline">
+                <a href="/restaurants/{{this._id}}/edit">Edit</a>
+                <a href="/restaurants/{{this._id}}/detail">Detail</a>
+                <form action="/restaurants/{{this._id}}/delete" method="POST" id="delete-form" style="display:inline">
+                  <button class="btn btn-outline-danger" type="submit" id="delete-button">Delete</button>
+                </form>
+              </li>
+            </ul>
+          </div>
+        </a>
+    </div>
+    {{/each}}
+  </div>
+  {{!-- <a class="btn btn-light" id="create-plus" role="button" href="/restaurants/new"><i class="fa-solid fa-plus" style="color: #fff;"></i></a> --}}
+
+</div>

@@ -1,0 +1,208 @@
+header {
+  overflow: hidden;
+  color: #666666;
+}
+
+.navbar .navbar-brand {
+  color: #4592af;
+}
+
+.navbar .navbar-brand:hover {
+  color: #226089;
+}
+
+/* .banner {
+  position: relative;
+  z-index: -1;
+  margin: -5px;
+  height: 360px;
+  background: #dddddd center center url('https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5720/restaurants-list-cover.jpg');
+  background-size: cover;
+  filter: blur(3px);
+} */
+
+/* .search-bar .search-bar-outer {
+  margin: 0 auto;
+  max-width: 680px;
+  background-color: #fce2cf;
+  border-radius: 8px;
+  padding: 20px 30px;
+  border: 0;
+  margin-top: -60px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+} */
+
+/* .search-bar .search-bar-inner h4 {
+  color: #9b4b4b;
+} */
+
+.form-control::placeholder {
+  color: #aaaaaa;
+  font-size: 0.8rem;
+}
+
+.btn-major {
+  background-color: #9b4b4b;
+  color: white;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+
+.card {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img{
+  height: 180px;
+}
+
+.card-title{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.restaurant-category {
+  color: #666666;
+  font-size: 0.8rem;
+}
+
+.restaurant-show-title {
+  position: relative;
+  top: -100px;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 992px) {
+  
+  .card img{
+    height: 115px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+  .restaurant-show-title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  
+  .card img{
+    height: auto;
+  }
+  
+}
+
+.container-navbar{
+  display:flex;
+  justify-content: space-between;
+}
+
+.container-search-bar{
+  margin-top:5rem;
+  padding:10px;
+  display:flex;
+  justify-content: space-between;
+}
+.search-bar-div{
+  /* height:20px; */
+  /* height:50px; */
+  width:30%;
+  border-radius: 25%;
+}
+#search-form{
+  border-radius: 25%;
+  height:50px;
+}
+.input-group .input-group-append .btn-major{
+  height:50px;
+}
+.sort-div{
+  width:30%;
+}
+.form-select{
+  height:50px;
+}
+
+
+
+.container-restaurant{
+  max-width: 25%;
+}
+
+.row-cols-1{
+  display:flex;
+  /* justify-content: center; */
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.index-ul{
+  text-align: end;
+  /* font-family: 'Open Sans', sans-serif; */
+  
+}
+.detail-ul{
+  text-align:center;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  font-family:'Open Sans', sans-serif;
+}
+
+#create-plus{
+  /* display:flex; */
+  font-size:30px;
+  /* position: fixed; */
+  /* bottom: 20px; */
+  /* right:5vw; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: #e90707;
+}
+.container-new{
+  width: 60%;
+  margin: 2em auto;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: antiquewhite;
+}
+.detail-div{
+  text-align:center;
+}
+.detail-word{
+  display: inline-block; /* 讓 detail-word 成為 inline-block 元素，以便置中 */
+  text-align: left; /* 將 detail-word 內的文字對齊方式設為左對齊 */
+  width:50%;
+  flex-wrap: wrap;
+  
+}
+input.form-control{
+  margin-left:5px;
+}
+.form-button{
+  text-align: end;
+}
+
+.restaurant-new-title {
+  position: relative;
+  top: 15px;
+  color:rgb(233, 176, 101);
+  text-align: center;
+  font-size: 3rem;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,90 @@
+<h1 class="mb-1 restaurant-new-title">新增餐廳</h1>
+<div class="container-new mt-5">
+  <form action="/restaurants" id="form" method="POST" class="row g-3 needs-validation" novalidate>
+    {{!-- name --}}
+    <div class="form-group">
+      <label for="form-name" class="form-label">餐廳名稱(中文) :</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" id="form-name" name="name" placeholder="請輸入餐廳中文名字 . . ." required>
+      </div>
+    </div>
+    
+    {{!--name_en --}}
+    <div class="form-group">
+      <label for="form-name_en" class="form-label">餐廳名稱(英文) :</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" id="form-name_en" name="name_en" placeholder="請輸入餐廳英文名字 . . .">
+      </div>
+    </div>
+    {{!-- category --}}
+    <div class="form-group">
+      <label for="form-category" class="form-label">餐廳類型 :</label>
+      <div class="input-group mb-3">
+        <input class="form-control" list="restaurants-datalistOptions" id="form-category" name="category" placeholder="請輸入餐廳類型 . . ." required>
+        <datalist id="restaurants-datalistOptions">
+          <option value="台灣美食">
+          <option value="中式美食">
+          <option value="韓國美食">
+          <option value="美式料理">
+          <option value="日本美食">
+          <option value="泰國美食">
+          <option value="港式美食">
+          <option value="越南美食">
+          <option value="墨西哥美食">
+          <option value="印度美食">
+          <option value="速食">
+        </datalist>
+      </div>
+    </div>
+    
+    {{!-- image --}}
+    <div class="form-group">
+      <label for="form-image" class="form-label">請附上一張餐廳照片 :</label>
+      <div class="input-group mb-3">
+        <input class="form-control" type="text" name="image" id="form-image" placeholder="請輸入網址 . . ." >
+      </div>
+    </div>
+    
+    {{!-- location --}}
+    <div class="form-group">
+      <label for="form-location" class="form-label">餐廳地址 :</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" id="form-location" name="location" placeholder="請輸入餐廳地址 . . ." required>
+      </div>
+    </div>
+    
+    {{!-- phone --}}
+    <div class="form-group">
+      <label for="form-phone" class="form-label">餐廳電話 :</label>
+      <div class="input-group mb-3 phone-input-group">
+        <input type="text" class="form-control" id="form-phone" aria-describedby="phone" name="phone" placeholder="請輸入電話或手機 . . ." required>
+      </div>
+    </div>
+{{!-- google_map --}}
+    <div class="form-group">
+      <label for="form-google_map" class="form-label">餐廳定位 :</label>
+      <div class="input-group  mb-3">
+        <input type="text" class="form-control" id="form-google_map" name="google_map" placeholder=" google_map : ">
+      </div>
+    </div>
+{{!-- rating --}}
+    <div class="form-group">
+      <label for="form-rating" class="form-label">評分 :</label>
+      <div class="input-group mb-3">
+        <input type="number" class="form-control" min="1" max="5" id="form-rating" name="rating" placeholder="請輸入1 ~ 5分" required>
+      </div>
+    </div>
+    
+{{!-- description --}}
+    <div class="form-group">
+      <label for="form-description" class="form-label">餐廳描述 :</label>
+      <div class="input-group mb-3">
+        <textarea class="form-control" aria-label="With textarea" id="form-description"  name="description" required></textarea>
+      </div>
+    </div>
+    <div class="form-button">
+      <button type="submit" class="btn btn-primary" id="create-button">Create</button>
+    </div>
+    
+  </form>
+</div>

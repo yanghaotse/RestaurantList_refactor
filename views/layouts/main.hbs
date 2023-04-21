@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant List</title>
+  <script src="https://kit.fontawesome.com/1c8871ad8b.js" crossorigin="anonymous"></script>
+  {{!--
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" /> --}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/stylesheet/bootstrap.css">
+  <link rel="stylesheet" href="/stylesheet/style.css">
+</head>
+
+<body>
+  <header>
+    <!-- navigation -->
+    <nav class="navbar navbar-light bg-light">
+      <div class="container container-navbar">
+        <a class="navbar-brand" href="/">
+          <i class="mr-5 fa-solid fa-utensils" style="color: #515961;"></i> <span>Restaurant List</span> 
+        </a>
+        <a class="btn btn-outline-secondary" id="create" role="button" href="/restaurants/new">Create</button></a>
+      </div>
+    </nav>
+
+    {{!-- <div class="banner"></div> --}}
+  </header>
+  <div class="container container-search-bar">
+    <div class="search-bar-div" style="display:inline-block">
+      {{!-- <div class="search-bar-inner"> --}}
+        <form action="/search" id="search-form">
+          <div class="input-group">
+            <input type="text" name="keyword" class="form-control" placeholder="請輸入餐廳、類別 . . ." aria-label="Restaurant Name..."
+              value="{{keyword}}" aria-describedby="search-button">
+            <div class="input-group-append">
+              <button class="btn btn-major" type="submit" id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+          </div>
+        </form>
+      {{!-- </div> --}}
+    </div>
+    <div class="form-group sort-div" style="display:inline-block">
+      <select class="form-select" aria-label="Default select example">
+        <option selected>排序</option>
+        <option value="asc">A->Z</option>
+        <option value="desc">Z->A</option>
+        <option value="category">類別</option>
+        <option value="location">地區</option>
+      </select>
+    </div>
+  </div>
+  {{{body}}}
+  <script src="/public/javascript/popper.js"></script>
+  <script src="/public/javascript.bootstrap.js"></script>
+  {{!-- 表單驗證 --}}
+  <script>
+    const createButton = document.querySelector('#create-button')
+    const form = document.querySelector('#form')
+    createButton.addEventListener('click', function onCreateButtonClicked(event) {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+      form.classList.add('was-validated')
+    })
+
+    
+  </script>
+  {{!-- delete-button監聽 --}}
+  <script>
+    //const deleteForm = document.querySelector('#delete-form')
+    const deleteButtons = document.querySelectorAll('#delete-button')
+    deleteButtons.forEach(deleteButton => {
+      deleteButton.addEventListener('click', function onDeleteButtonClicked(event) {
+        event.preventDefault()
+        if (confirm("確定要刪除此筆餐廳資料嗎?")) {
+          const deleteForm = deleteButton.parentElement
+          deleteForm.submit()
+        }
+      })
+    })
+    
+  </script>
+</body>
+
+</html>
