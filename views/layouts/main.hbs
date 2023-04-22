@@ -61,7 +61,25 @@
         }
       })
     })
-    
+  </script>
+  {{!-- sort 監聽 --}}
+  <script>
+    const sortForm = document.querySelector("#sort-form")
+    const select = document.querySelector("#sort-select")
+    select.addEventListener('change', () => {
+      //console.log(select.value)
+      sortForm.action = `/sort/?sort-select=${select.value}`
+      console.log(sortForm.action)
+      sortForm.submit()
+    })
+  </script>
+{{!-- 網頁重新整理時會進入此處 --}}
+  <script>
+    //取得瀏覽器導航的行為類型
+    //0: 新頁面被打開或是首次載入 1: 重新整理 2: 瀏覽器的前進或後退按鈕被按下 255: 瀏覽器導航類型不明確
+    if (performance.navigation.type == 1) { 
+        location.href = '/';
+      }
   </script>
 </body>
 

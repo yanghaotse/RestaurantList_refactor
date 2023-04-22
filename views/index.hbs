@@ -10,14 +10,22 @@
         </div>
       </form>
   </div>
-  <div class="form-group sort-div" style="display:inline-block">
-    <select class="form-select" aria-label="Default select example">
-      <option selected>排序</option>
-      <option value="asc">A->Z</option>
-      <option value="desc">Z->A</option>
-      <option value="category">類別</option>
-      <option value="location">地區</option>
-    </select>
+  <div class="sort-div" style="display:inline-block">
+    <form action="/sort" method="GET" id="sort-form">
+      <div class="input-group">
+        <select class="form-select" name="sort" id="sort-select" aria-label="Default select example">
+          {{#if sort}}
+            <option value="{{sort}}" selected>{{sort}}</option>
+          {{else}}
+            <option selected>排序</option>
+          {{/if}}
+          <option value="A->Z">A->Z</option>
+          <option value="Z->A">Z->A</option>
+          <option value="類別">類別</option>
+          <option value="地區">地區</option>
+        </select>
+      </div>
+    </form>
   </div>
 </div>
 

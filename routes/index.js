@@ -5,6 +5,7 @@ const home = require('./models/home')
 const restaurants = require('./models/restaurants')
 
 router.use('/', home)
+
 router.use('/restaurants', restaurants)
 
 

@@ -120,11 +120,13 @@ header {
 .input-group .input-group-append .btn-major{
   height:50px;
 }
+
 .sort-div{
   width:30%;
 }
 .form-select{
   height:50px;
+  width: 100%;
 }
 
 .container-restaurant{

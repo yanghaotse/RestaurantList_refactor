@@ -3,7 +3,6 @@ const router = express.Router()
 const Restaurant = require('../../models/restaurant')
 
 router.get('/',(req, res) => {
-  // res.render("index")
   Restaurant.find()
     .lean()
     .sort({name: 'asc'}) //sort()排序，asc正序/desc反序
@@ -11,7 +10,11 @@ router.get('/',(req, res) => {
     .catch(error => console.log(error))
 })
 
+// router.get("/sort/?sort-select=asc", (req, res) => {
+//   console.log('params:',req.params)
+//   console.log('query:',req.query)
 
+// })
 
 
 module.exports = router
