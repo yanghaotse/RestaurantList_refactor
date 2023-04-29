@@ -34,20 +34,18 @@
   
   <script src="/public/javascript/popper.js"></script>
   <script src="/public/javascript.bootstrap.js"></script>
-  {{!-- 表單驗證 --}}
+  {{!-- "新增餐廳"表單驗證 (+編輯餐廳)--}} 
   <script>
-    const createButton = document.querySelector('#create-button')
     const form = document.querySelector('#form')
-    createButton.addEventListener('click', function onCreateButtonClicked(event) {
+    form.addEventListener('submit', function onFormSubmitted(event) {
       if (!form.checkValidity()) {
         event.preventDefault()
         event.stopPropagation()
       }
       form.classList.add('was-validated')
-    })
-
-    
+    })   
   </script>
+
   {{!-- delete-button監聽 --}}
   <script>
     //const deleteForm = document.querySelector('#delete-form')
